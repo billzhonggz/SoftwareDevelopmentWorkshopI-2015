@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">	
+	</head>
+	<body>
+	<p><a href="index.html">Homepage</a></p>
+		<div>
+			<form action="jobs.php" method="post">
+				<div>
+					<p>User Name  <input type="text" name="usrname"/></p>
+					<fieldset>
+						<legend>Your Current Skill</legend>
+						<input type="checkbox" name="current_skill" value="Web Design">
+						Web Design
+						<br />
+						<input type="checkbox" name="current_skill" value="Java">
+						Java
+						<br />
+						<input type="checkbox" name="current_skill" value="Database">
+						Database
+						<br />
+					</fieldset>
+					<br />
+					<fieldset>
+						<legnend>City Expected</legned>
+						</br>
+						<input type="radio" name="city" value="Beijing">
+						Beijing
+						<br />
+						<input type="radio" name="city" value="Shenzhen">
+						Shenzhen
+						<br />
+						<input type="radio" name="city" value="Zhuhai">
+						Zhuhai
+						<br />
+					</fieldset>
+					<p>Working Experience</p>
+					<textarea rows="10" cols="30" name="experience"></textarea>	
+				</div>
+				<div>
+					<p>Position</p>
+					<select name="position">
+						<option value="Officer">Officer</option>
+						<option value="Manager">Manager</option>
+						<option value="Engineer">Engineer</option>
+						<option value="Architect">Architect</option>
+					</select>
+					<p>Recent Jobs</p>
+					<select multiple="multiple" name="jobs" size="10">
+						<option value="Assistant">Assistant</option>
+						<option value="Software_Engineer">Software Engineer</option>
+						<option value="Customer_Service">Customer Service</option>
+						<option value="Manager">Manager</option>
+						<option value="ceo">CEO</option>
+					</select>
+					<p>Upload File: <input type="file" name="file" id="file" /></p>
+				</div>
+				<input type="submit" name="submit_button" id="submit_button" value="Submit" onclick="beforeSubmit();"/>
+				<input type="reset">
+			</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,149 @@
+#Container{
+
+    width:1200px;
+
+    margin:0 auto;/*set the container to be horizontally centered*/
+
+    background:white;
+
+}
+
+#Header{
+
+    height:100px;
+
+    background:black;
+	
+	color:white;
+
+}
+
+#logo{
+    
+    font-size:50px;
+
+    padding-left:50px;
+
+    padding-top:20px;
+
+    padding-bottom:50px;
+
+}
+
+#Content{
+
+    height:450px;
+     /*This is to set the height of the content.  Usually we don't set the height, we use overflow:auto instead.  It will decide the height based on the content height.  If we don't set it up, the content will defaul to be 1 char height.
+
+    margin-top:20px;/*The distance between the content and the header element*/
+
+    background:white;
+}
+
+#Content-Left{
+
+    height:400px;
+
+    width:270px;
+
+    margin:20px;
+
+    float:left;/*set to be float to make multi-column*/
+
+    background:#B3ECFF;
+}
+
+#Content-Main{
+
+    height:400px;
+
+    width:590px;
+
+    margin:20px;/* the distance from other element */
+
+    float:left;/*set to be float to make multi-column*/
+
+    background:#B3ECFF;
+
+}
+
+#Content-Right{
+
+	height:400px;
+	
+	width:200px;
+	
+	margin:20px;
+	
+	float:left;
+	
+	background:white;
+	
+}
+#Content-Full{
+
+    height:400px;
+
+    width:1160px;
+
+    margin:20px;/* the distance from other element */
+
+    float:left;/*set to be float to make multi-column*/
+
+    background:#B3ECFF;
+
+}
+
+#Footer{
+
+    height:40px;
+
+    background:red;
+
+    //margin-top:20px;
+
+}
+p{
+    
+    padding:10px;
+}
+
+table,th,td{
+
+    border-width: 1px;
+
+    border-style: solid;
+
+    border-collapse: collapse;
+
+    padding-left: 5px;
+
+    padding-right: 5px;
+
+}
+
+ul{
+
+    list-style-type: none;
+
+}
+.navitem{
+
+    display: inline;
+}
+.anavitem{
+
+    display: block;
+
+    width: 60px;
+
+}
+
+#nav{
+
+    text-decoration: none;
+
+    margin:0;
+
+    padding:0;
+}

@@ -1,0 +1,78 @@
+<html>
+<head>
+<script type='text/javascript' src="js/validation.js"></script>
+</head>
+
+<form onsubmit='return formValidator()'>
+<table>
+  <tr>
+  	<td>First Name: </td>
+    <td>
+    	<input type='text' id='firstname' onblur="isAlphabet(this,'Please enter only letters for your name')"/><br />
+    </td>
+    <td>
+      	<p id="name_error" style="color:red"></p>
+    </td>
+  </tr>
+  <tr>
+  	<td>Address: </td>
+    <td>
+    	<input type='text' id='addr' onblur="isAlphanumeric(this, 'Numbers and Letters Only for Address')"/><br />
+    </td>
+    <td>
+      	<p id="addr_error" style="color:red"></p>
+    </td>
+  </tr>
+  <tr>
+  	<td>Zip Code: </td>
+  	<td>
+  		<input type='text' id='zip' onblur="isNumeric(this, 'Please enter a valid zip code')"/><br />
+  	</td>
+    <td>
+      	<p id="zip_error" style="color:red"></p>
+    </td>
+  </tr>
+  <tr>
+  	<td>State: </td>
+    <td>
+    	<select id='state' onblur="madeSelection(this, 'Please Choose a State')">
+			<option>Please Choose</option>
+			<option>AL</option>
+			<option>CA</option>
+			<option>TX</option>
+			<option>WI</option>
+        </select>
+        <br />
+    </td>
+    <td>
+      	<p id="state_error" style="color:red"></p>
+    </td>
+  </tr>
+  <tr>
+  	<td>Username(6-8 characters): </td>
+  	<td>
+  		<input type='text' id='username' onblur="lengthRestriction(this, 6, 8)"/><br />
+  	</td>
+    <td>
+      	<p id="usrname_error" style="color:red"></p>
+    </td>
+  </tr>
+  <tr>
+  	<td>Email: </td>
+  	<td>
+  		<input type='text' id='email' onblur="emailValidator(this, 'Please enter a valid email address')"/><br />
+  	</td>
+    <td>
+      	<p id="email_error" style="color:red"></p>
+    </td>
+  </tr>
+  <tr>
+  	<td></td>
+  	<td>
+  		<input type='submit' value='Check Form' />
+  	</td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

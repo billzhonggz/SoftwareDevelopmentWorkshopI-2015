@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">	
+	</head>
+	<body>
+		<div>
+			<form>
+				<div>
+					<p>User Name  <input type="text" name="user_mame"/></p>
+					<fieldset>
+						<legend>Your Current Skill</legend>
+						<input type="checkbox" name="current_skill" value="Web Design">
+						Web Design
+						<br />
+						<input type="checkbox" name="current_skill" value="Java">
+						Java
+						<br />
+						<input type="checkbox" name="current_skill" value="Database">
+						Database
+						<br />
+					</fieldset>
+					<br />
+					<fieldset>
+						<legnend>City Expected</legned>
+						</br>
+						<input type="radio" name="city" value="Beijing">
+						Beijing
+						<br />
+						<input type="radio" name="city" value="Shenzhen">
+						Shenzhen
+						<br />
+						<input type="radio" name="city" value="Zhuhai">
+						Zhuhai
+						<br />
+					</fieldset>
+					<p>Working Experience</p>
+					<textarea rows="10" cols="30" id="experience"></textarea>	
+				</div>
+				<div>
+					<p>Position</p>
+					<select name="position">
+						<option value="Officer">Officer</option>
+						<option value="Manager">Manager</option>
+						<option value="Engineer">Engineer</option>
+						<option value="Architect">Architect</option>
+					</select>
+					<p>Recent Jobs</p>
+					<select multiple="multiple" id="jobs" size="10">
+						<option value="Assistant">Assistant</option>
+						<option value="Software_Engineer">Software Engineer</option>
+						<option value="Customer_Service">Customer Service</option>
+						<option value="Manager">Manager</option>
+						<option value="ceo">CEO</option>
+					</select>
+					<p>Upload File: <input type="file" name="file" id="file" /></p>
+				</div>
+				<input type="submit" name="submit_button" id="submit_button" value="Submit" onclick="beforeSubmit();"/>
+				<input type="reset">
+			</form>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	function beforeSubmit()
+	{
+		//alert("in function");
+		var s1="Your name is: ";
+		var Name=document.all["user_mame"].value;
+		var s2="\nYour skill is: ";
+		var Skill=getCheckBoxValue();
+		var s3="\nYour expected working city is: ";
+		var City=getRadioValue();
+		var s4="\nYour position is: ";
+		var Position=document.all["position"].value;
+		var s5="\nYour jobs are: "
+		var Jobs=getSelectedValue();
+		var s6="\nYour experience is: \n    "
+		var Experience=document.getElementById('experience').value;
+		alert(s1 + Name  + s2 + Skill  + s3 + City  + s4 + Position + s5 + Jobs + s6 + Experience);
+	}
+	function getCheckBoxValue()
+	{
+		//alert("in checkbox function");
+		var items = document.getElementsByName("current_skill");
+		var index = 0;
+		var arr = [];
+		var result = "";
+		for (var i=0;i<items.length;i++)
+		{
+			if(items[i].checked)
+				{
+					arr[index++] = items[i].value;
+					result = result + items[i].value + " ";
+				}
+		}
+		return result;
+	}
+	function getRadioValue()
+	{
+		//alert("In radio function");
+		var items = document.getElementsByName("city");
+		for (var i = 0; i < items.length; i++)
+		{
+			if(items[i].checked)
+			{						
+				return items[i].value;
+			}
+		};
+	}
+	function getSelectedValue()
+	{
+		//alert("In multiple select function");
+		var items = document.getElementById('jobs');
+		var opts = [];
+		for (var i = 0; i < items.length; i++)
+		{
+			if(items.options[i].selected)
+			{
+				opts.push(items[i].value);
+			}
+		}
+		return opts;
+	}
+</script>
+

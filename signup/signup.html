@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sign Up</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/signup.css" rel="stylesheet">
+    
+    <!-- Validation Javascript -->
+    <script type='text/javascript' src="js/validation.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Sign Up</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Our Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+    <!-- Sign Up Form -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Sign Up Now!</h2>
+                <hr>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="first_name" class="col-lg-2 control-lable">Name</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="first_name" placeholder="Your Name" onblur="isAlphabet(this,'Please enter only letters for your name')"/>
+                            <p class="text-danger" id="name_error"></p>
+                        </div>
+                        <label for="email" class="col-lg-2 control-lable">Username</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="email" placeholder="username@services.com" onblur="emailValidator(this, 'Please enter a valid email address')"/>
+                            <p class="text-danger" id="email_error"></p>
+                        </div>
+                        <label for="password" class="col-lg-2 control-lable">Password</label>
+                        <div class="col-lg-10">
+                            <input type="password" class="form-control" id="password" placeholder="Password" onblur="lengthRestriction(this, 6, 16)"/>
+                            <p class="text-danger" id="usrname_error"></p>
+                        </div>
+                        <label for="phone" class="col-lg-2 control-label">Phone Number</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="phone" placeholder="Phone Number" onblur="isNumeric(this,'Please enter only numbers.');phoneLengthRestriction(this,11,11);"/>
+                            <p class="text-danger" id="zip_error"></p><p class="text-danger" id="phone_error"></p>
+                        </div>
+                        <label for="birthday" class="col-lg-2 control-label">Birthday</label>
+                        <div class="col-lg-4">
+                            <select class="form-control" id="birthday-year" onblur="madeSelection(this, 'Please select a year')">
+                                <option>Please Choose</option>
+                                <option>2010</option>
+                                <option>2011</option>
+                                <option>2012</option>
+                                <option>2013</option>
+                                <option>2014</option>
+                                <option>2015</option>
+                                <option>2016</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-3">
+                            <select class="form-control" id="birthday-month" onblur="madeSelection(this, 'Please select a month')">
+                                <option>Please Choose</option>
+                                <option title=January value='1'>January</option>
+                                <option title=February value='2'>February</option>
+                                <option title=March value='3'>March</option>
+                                <option title=April value='4'>April</option>
+                                <option title=May value='5'>May</option>
+                                <option title=June value='6'>June</option>
+                                <option title=July value='7'>July</option>
+                                <option title=August value='8'>August</option>
+                                <option title=September value='9'>September</option>
+                                <option title=October value='10'>October</option>
+                                <option title=November value='11'>November</option>
+                                <option title=December value='12'>December</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-3">
+                            <select class="form-control" id="birthday-day" onblur="madeSelection(this, 'Please select a day')">
+                                <option>Please Choose</option>
+                                <option value='1'>1</option>
+                                <option value='2'>2</option>
+                                <option value='3'>3</option>
+                                <option value='4'>4</option>
+                                <option value='5'>5</option>
+                                <option value='6'>6</option>
+                                <option value='7'>7</option>
+                                <option value='8'>8</option>
+                                <option value='9'>9</option>
+                                <option value='10'>10</option>
+                                <option value='11'>11</option>
+                                <option value='12'>12</option>
+                                <option value='13'>13</option>
+                                <option value='14'>14</option>
+                                <option value='15'>15</option>
+                                <option value='16'>16</option>
+                                <option value='17'>17</option>
+                                <option value='18'>18</option>
+                                <option value='19'>19</option>
+                                <option value='20'>20</option>
+                                <option value='21'>21</option>
+                                <option value='22'>22</option>
+                                <option value='23'>23</option>
+                                <option value='24'>24</option>
+                                <option value='25'>25</option>
+                                <option value='26'>26</option>
+                                <option value='27'>27</option>
+                                <option value='28'>28</option>
+                                <option value='29'>29</option>
+                                <option value='30'>30</option>
+                                <option value='31'>31</option>
+                            </select>
+                            <p class="text-danger" id="date_error"></p>
+                        </div>
+                        <label for="gender" class="col-lg-2 control-label">Gender</label>
+                        <div class="col-lg-10">
+                            <label class="radio-inline">
+                                <input type="radio" name="gender" id="gender-male" value="male" onblur="radioCheck(this,'Please choose a gender')">Male
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="gender" id="gender-female" value="female" onblur="radioCheck(this,'Please choose a gender')">Female
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="gender" id="gender-other" value="other" onblur="radioCheck(this,'Please choose a gender')">Other
+                            </label>
+                            <br>
+                            <p class="text-danger" id="gender_error"></p>
+                        </div>
+                        <label for="phone" class="col-lg-2 control-label">Optional Phone Number</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="opt_phone" placeholder="Optional Phone Number" onblur="optPhoneIsNumeric(this,'Please enter only numbers.');optPhoneLengthRestriction(this,11,11);"/>
+                            <p class="text-danger" id="opt_error"></p><p class="text-danger" id="optphone_error"></p>
+                            <hr>
+                        </div>
+                        
+                        <div class="col-lg-12">
+                            <button type="submit" class="btn btn-primary">Submit and Sign Up</button>
+                            <button type="reset" class="btn btn-danger">Reset the Form</button>
+                        </div>
+                        
+                    <!-- Form group -->
+                    </div>
+                <!-- Form -->
+                </form>
+            <!-- Offset -->
+            </div>
+        <!-- Row -->
+        </div>
+    <!-- Container -->
+    </div>
+    
+</body>
+
+
+</html>
+            
+                    
