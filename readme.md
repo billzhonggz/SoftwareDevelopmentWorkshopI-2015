@@ -9,11 +9,11 @@
         * [Blog](exercise3/blog.html)
         * [Manage](exercise3/manage.html)
     * Exercise 4
-        * [Seat picker](exericse4/seat_pick.html)
-        * [JS validation](exericse4/validation.html)
+        * [Seat picker](exercise4/seat_pick.html)
+        * [JS validation](exercise4/validation.html)
     * Exercise 5
-        * [Shopping cart](exericse5/mycart.html)
-        * [HTML5 face](exericse5/myface.html)
+        * [Shopping cart](exercise5/mycart.html)
+        * [HTML5 face](exercise5/myface.html)
     * [Add me to the team](add-to-team)
     * [Sign up](signup)
 * Contents PHP code
