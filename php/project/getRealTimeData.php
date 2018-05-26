@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: text/xml');
-$con = mysql_connect("mysql.coding.io","user-OMgnQb09bC","pM5u^A0nFd)]+^0lV?}p","db-u4BLEXV83Q");
+$con = mysqli_connect("mysql.coding.io","user-OMgnQb09bC","pM5u^A0nFd)]+^0lV?}p","db-u4BLEXV83Q");
 if (!$con){
 	die('Could not connect: ' . mysql_error());
 }
