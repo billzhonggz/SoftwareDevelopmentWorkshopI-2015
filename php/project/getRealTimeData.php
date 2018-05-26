@@ -1,10 +1,10 @@
 <?php
 header('Content-Type: text/xml');
-$con = mysql_connect("119.29.106.147","esdc","123456");
+$con = mysql_connect("mysql.coding.io","user-OMgnQb09bC","pM5u^A0nFd)]+^0lV?}p","db-u4BLEXV83Q");
 if (!$con){
 	die('Could not connect: ' . mysql_error());
 }
-$sql = "SELECT * FROM `ESDC`.`raw_data` WHERE d_id='".$_GET["t"]."'";
+$sql = "SELECT * FROM `raw_data` WHERE d_id='".$_GET["t"]."'";
 $result=mysql_query($sql,$con);
 $row = mysql_fetch_row($result);
 echo mysql_error();

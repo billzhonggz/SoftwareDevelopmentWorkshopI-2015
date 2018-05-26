@@ -35,7 +35,7 @@
                                             <tbody>
 											<?php 
 											// Use PHP to throw the table
-											$con = mysqli_connect("cstserver.uic.edu.hk","j430003045","123456","j430003045");
+											$con = mysqli_connect("mysql.coding.io","user-OMgnQb09bC","pM5u^A0nFd)]+^0lV?}p","db-u4BLEXV83Q");
 											if (!$con)
 											{
 												die('Could not connect: ' . mysql_error());

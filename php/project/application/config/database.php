@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'cstserver.uic.edu.hk',
-	'username' => 'j430003045',
-	'password' => '123456',
-	'database' => 'j430003045',
+	'hostname' => 'mysql.coding.io',
+	'username' => 'user-OMgnQb09bC',
+	'password' => 'pM5u^A0nFd)]+^0lV?}p',
+	'database' => 'db-u4BLEXV83Q',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
