@@ -1,6 +1,7 @@
 # Software Development Workshop I - 2015
 > This is the code behind the work of daily course, *Software Development Workshop I* in semester 2, 2015-2016 academic year.
-> Some of these content PHP files, which will not work correctly on GitHub pages.
+>
+> Checkout live demos on https://ws1.billzhonggz.com/
 
 ##  Contents
 
@@ -20,6 +21,11 @@
     * [Sign up](signup)
 * Contents PHP code
     * [Exercise 7](php/exercise7)
+
     * [Exercise 8](php/exercise8)
+
     * [Final Project](php/project)
+
+      The ESDC project backend. Use "admin" as both username and password to login.
+
     * [Calculator](php/calc.php)
