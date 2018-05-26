@@ -48,8 +48,8 @@
     <![endif]-->
     
     <!-- MAP APIs-->
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=H03aPMgKdFuuSPwHDGDokrsE"></script>
-    <script type="text/javascript" src="http://api.map.baidu.com/library/Heatmap/2.0/src/Heatmap_min.js"></script>
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=H03aPMgKdFuuSPwHDGDokrsE"></script>
+    <script type="text/javascript" src="https://api.map.baidu.com/library/Heatmap/2.0/src/Heatmap_min.js"></script>
 
 	<link rel="SHORTCUT ICON" href="<?php echo base_url(); ?>/img/icon.ico"> 
 </head>
